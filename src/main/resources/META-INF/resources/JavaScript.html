@@ -5,7 +5,97 @@
 		<META name="viewport" content="width=device-width, initial-scale=1.0">
 		<TITLE>Spring Boot 練習</TITLE>
 	</HEAD>
-	<BODY>
-		<SCRIPT></SCRIPT>		
+	<BODY id="body">
+		<SCRIPT>
+			var fieldsetElement = document.createElement('FIELDSET'),
+				legendElement = document.createElement('LEGEND'),
+				formElement = document.createElement('FORM'),
+				tableElement = document.createElement('TABLE'),
+				tbodyElement = document.createElement('TBODY');
+			document.body.appendChild(fieldsetElement);
+			legendElement.innerHTML = '表單';
+			fieldsetElement.appendChild(legendElement);
+			fieldsetElement.appendChild(formElement);
+			formElement.appendChild(tableElement);
+			tableElement.appendChild(tbodyElement);
+
+			var trElement1 = document.createElement('TR'), trElement2 = document.createElement('TR'), trElement3 = document.createElement('TR'), trElement4 = document.createElement('TR'), trElement5 = document.createElement('TR');
+
+			var thElement1 = document.createElement('TH'), tdElement1 = document.createElement('TD'), inputElementFullname = document.createElement('INPUT');
+			tbodyElement.appendChild(trElement1);
+			trElement1.appendChild(thElement1);
+			trElement1.appendChild(tdElement1);
+			thElement1.innerHTML = '姓名';
+			inputElementFullname.setAttribute('name', 'fullname');
+			inputElementFullname.setAttribute('type', 'text');
+			tdElement1.appendChild(inputElementFullname);
+		</SCRIPT>
+		<!--
+		<FIELDSET>
+			<LEGEND>表單</LEGEND>
+			<FORM action="/" method="POST">
+				<TABLE>
+					<TBODY>
+						<TR>
+							<TH>姓名</TH>
+							<TD>
+								<INPUT name="fullname" type="text">
+							</TD>
+						</TR>
+						<TR>
+							<TH>性別</TH>
+							<TD>
+								<LABEL>
+									<INPUT name="gender" type="radio" value="male">
+									<SPAN>男</SPAN>
+								</LABEL>
+								<LABEL>
+									<INPUT name="gender" type="radio" value="female">
+									<SPAN>女</SPAN>
+								</LABEL>
+							</TD>
+						</TR>
+						<TR>
+							<TH>性別</TH>
+							<TD>
+								<LABEL>
+									<INPUT name="role" type="checkbox" value="p">
+									<SPAN>P端</SPAN>
+								</LABEL>
+								<LABEL>
+									<INPUT name="role" type="checkbox" value="b">
+									<SPAN>B端</SPAN>
+								</LABEL>
+								<LABEL>
+									<INPUT name="role" type="checkbox" value="c">
+									<SPAN>C端</SPAN>
+								</LABEL>
+							</TD>
+						</TR>
+						<TR>
+							<TH>地區</TH>
+							<TD>
+								<SELECT name="location">
+									<OPTGROUP label="台南市">
+										<OPTION value="701">東區</OPTION>
+									</OPTGROUP>
+									<OPTGROUP label="高雄市">
+										<OPTION value="804">鼓山區</OPTION>
+									</OPTGROUP>
+								</SELECT>
+							</TD>
+						</TR>
+						<TR>
+							<TD colspan="2">
+								<INPUT accept="image/*" name="image" type="file">
+							</TD>
+						</TR>
+					</TBODY>
+				</TABLE>
+				<INPUT type="reset" value="取消">
+				<INPUT type="submit" value="確定">
+			</FORM>
+		</FIELDSET>
+		-->
 	</BODY>
 </HTML>
